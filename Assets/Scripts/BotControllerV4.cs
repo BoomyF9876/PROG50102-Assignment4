@@ -11,6 +11,7 @@ public class BotControllerV4 : MonoBehaviour
     private bool isIdle = true;
     private int IsWalking = Animator.StringToHash("isWalking");
     private int IsIdle = Animator.StringToHash("isIdle");
+    private int ShootBullet = Animator.StringToHash("shootBullet");
     [SerializeField] float moveSpeed = 2.5f;
     [SerializeField] float turnSpeed = 100f;
     private BotInputAction inputActions;
@@ -82,6 +83,7 @@ public class BotControllerV4 : MonoBehaviour
     {
         if (Input.GetMouseButtonDown(0))
         {
+            animator.SetTrigger(ShootBullet);
             Instantiate(bullet, weapon.position, weapon.rotation);
         }
     }

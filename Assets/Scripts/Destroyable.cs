@@ -7,7 +7,7 @@ public class Destroyable : MonoBehaviour, ITakeDamage
 
     public int Health { get { return health; } }
 
-    public float NormalizedHealth { get { return (float)health/(float)maxHealth; } }
+    public float NormalizedHealth { get { return (float)health/maxHealth; } }
 
     [SerializeField] HealthySystem healthySystem;
 
@@ -18,7 +18,6 @@ public class Destroyable : MonoBehaviour, ITakeDamage
     public void TakeDamage(int damage)
     {
         health -= damage;
-        Debug.Log(damage + ", " + health + ", " + maxHealth + ", " + NormalizedHealth);
         if (health < maxHealth) healthySystem.gameObject.SetActive(true);
         healthySystem.UpdateHealth(NormalizedHealth);
         if (health <= 0) Destroy(gameObject);

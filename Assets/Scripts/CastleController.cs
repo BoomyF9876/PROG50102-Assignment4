@@ -8,7 +8,6 @@ public class CastleController : MonoBehaviour
     private int IsWalking = Animator.StringToHash("isWalking");
     private int IsIdle = Animator.StringToHash("isIdle");
     private int IsJumping = Animator.StringToHash("isJumping");
-    [SerializeField] float moveSpeed = 2.5f;
 
     private void Awake()
     {
