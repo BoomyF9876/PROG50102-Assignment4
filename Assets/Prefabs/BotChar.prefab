@@ -1661,9 +1661,6 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 3638253222883877985}
-  - component: {fileID: 8310753955316632696}
-  - component: {fileID: 8471429922709944478}
-  - component: {fileID: 5540289848539669611}
   - component: {fileID: 507894726025430712}
   m_Layer: 0
   m_Name: BotChar
@@ -1688,51 +1685,6 @@ Transform:
   - {fileID: 845091371262424769}
   m_Father: {fileID: 0}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
---- !u!114 &8310753955316632696
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 6485232806613501636}
-  m_Enabled: 0
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: ba2df12a750fdf244b5816cdba4e53ea, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  animator: {fileID: 0}
---- !u!114 &8471429922709944478
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 6485232806613501636}
-  m_Enabled: 0
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 2b95578efcb10474088aef1d578cfd08, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  animator: {fileID: 0}
-  moveSpeed: 2
-  rotateSpeed: 20
-  stopDistance: 0.1
-  target: {x: 0, y: 0, z: 0}
---- !u!114 &5540289848539669611
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 6485232806613501636}
-  m_Enabled: 0
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 46ec454142cd0ee44b956d5c0d3c41a1, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  animator: {fileID: 0}
-  moveSpeed: 2.5
-  rotateSpeed: 100
 --- !u!114 &507894726025430712
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -1746,6 +1698,8 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   animator: {fileID: 0}
+  weapon: {fileID: 0}
+  bullet: {fileID: 0}
   moveSpeed: 2.5
   turnSpeed: 100
 --- !u!1 &6533437453137818491
