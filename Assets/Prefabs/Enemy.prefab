@@ -46,6 +46,9 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   animator: {fileID: 0}
+  moveSpeed: 0.5
+  turnSpeed: 5
+  player: {fileID: 0}
 --- !u!1001 &7377225099395741226
 PrefabInstance:
   m_ObjectHideFlags: 0

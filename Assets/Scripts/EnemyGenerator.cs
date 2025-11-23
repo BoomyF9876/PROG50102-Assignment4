@@ -2,7 +2,8 @@ using UnityEngine;
 
 public class EnemyGenerator : MonoBehaviour
 {
-    [SerializeField] private GameObject enemy;
+    [SerializeField] private GameObject player;
+    [SerializeField] private EnemyController enemy;
     [SerializeField] private int count = 10;
 
     private void Start()
@@ -13,11 +14,12 @@ public class EnemyGenerator : MonoBehaviour
             var b = Instantiate(enemy, transform.position + offset, Quaternion.identity);
             b.name = $"Enemy({i})";
             b.transform.SetParent(transform);
+            b.player = player;
         }
     }
 
     void Update()
     {
-
+        
     }
 }

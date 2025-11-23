@@ -3,12 +3,20 @@
   "WorkspaceRootPath": "C:\\Users\\boomy\\Desktop\\projects\\sheridan\\PROG50102-Assignment4\\",
   "Documents": [
     {
-      "AbsoluteMoniker": "D:0:0:{878AFA59-A150-B058-4D4F-7FCE0A51902C}|Assembly-CSharp.csproj|c:\\users\\boomy\\desktop\\projects\\sheridan\\prog50102-assignment4\\assets\\scripts\\enemycontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "AbsoluteMoniker": "D:0:0:{878AFA59-A150-B058-4D4F-7FCE0A51902C}|Assembly-CSharp.csproj|C:\\Users\\boomy\\Desktop\\projects\\sheridan\\PROG50102-Assignment4\\assets\\scripts\\botcontrollerv4.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{878AFA59-A150-B058-4D4F-7FCE0A51902C}|Assembly-CSharp.csproj|solutionrelative:assets\\scripts\\botcontrollerv4.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{878AFA59-A150-B058-4D4F-7FCE0A51902C}|Assembly-CSharp.csproj|c:\\users\\boomy\\desktop\\projects\\sheridan\\prog50102-assignment4\\assets\\scripts\\enemygenerator.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{878AFA59-A150-B058-4D4F-7FCE0A51902C}|Assembly-CSharp.csproj|solutionrelative:assets\\scripts\\enemygenerator.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{878AFA59-A150-B058-4D4F-7FCE0A51902C}|Assembly-CSharp.csproj|C:\\Users\\boomy\\Desktop\\projects\\sheridan\\PROG50102-Assignment4\\assets\\scripts\\enemycontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
       "RelativeMoniker": "D:0:0:{878AFA59-A150-B058-4D4F-7FCE0A51902C}|Assembly-CSharp.csproj|solutionrelative:assets\\scripts\\enemycontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{878AFA59-A150-B058-4D4F-7FCE0A51902C}|Assembly-CSharp.csproj|C:\\Users\\boomy\\Desktop\\projects\\sheridan\\PROG50102-Assignment4\\assets\\scripts\\botcontrollerv4.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{878AFA59-A150-B058-4D4F-7FCE0A51902C}|Assembly-CSharp.csproj|solutionrelative:assets\\scripts\\botcontrollerv4.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+      "AbsoluteMoniker": "D:0:0:{878AFA59-A150-B058-4D4F-7FCE0A51902C}|Assembly-CSharp.csproj|C:\\Users\\boomy\\Desktop\\projects\\sheridan\\PROG50102-Assignment4\\assets\\scripts\\dynamicwall.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{878AFA59-A150-B058-4D4F-7FCE0A51902C}|Assembly-CSharp.csproj|solutionrelative:assets\\scripts\\dynamicwall.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
       "AbsoluteMoniker": "D:0:0:{878AFA59-A150-B058-4D4F-7FCE0A51902C}|Assembly-CSharp.csproj|C:\\Users\\boomy\\Desktop\\projects\\sheridan\\PROG50102-Assignment4\\assets\\scripts\\castlecontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
@@ -26,36 +34,62 @@
       "DocumentGroups": [
         {
           "DockedWidth": 200,
-          "SelectedChildIndex": 0,
+          "SelectedChildIndex": 3,
           "Children": [
             {
               "$type": "Document",
-              "DocumentIndex": 0,
+              "DocumentIndex": 3,
+              "Title": "DynamicWall.cs",
+              "DocumentMoniker": "C:\\Users\\boomy\\Desktop\\projects\\sheridan\\PROG50102-Assignment4\\Assets\\Scripts\\DynamicWall.cs",
+              "RelativeDocumentMoniker": "Assets\\Scripts\\DynamicWall.cs",
+              "ToolTip": "C:\\Users\\boomy\\Desktop\\projects\\sheridan\\PROG50102-Assignment4\\Assets\\Scripts\\DynamicWall.cs",
+              "RelativeToolTip": "Assets\\Scripts\\DynamicWall.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAB0AAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-11-22T21:04:53.157Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 1,
+              "Title": "EnemyGenerator.cs",
+              "DocumentMoniker": "C:\\Users\\boomy\\Desktop\\projects\\sheridan\\PROG50102-Assignment4\\Assets\\Scripts\\EnemyGenerator.cs",
+              "RelativeDocumentMoniker": "Assets\\Scripts\\EnemyGenerator.cs",
+              "ToolTip": "C:\\Users\\boomy\\Desktop\\projects\\sheridan\\PROG50102-Assignment4\\Assets\\Scripts\\EnemyGenerator.cs",
+              "RelativeToolTip": "Assets\\Scripts\\EnemyGenerator.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAA8AAAAtAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-11-22T21:04:45.915Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 2,
               "Title": "EnemyController.cs",
               "DocumentMoniker": "C:\\Users\\boomy\\Desktop\\projects\\sheridan\\PROG50102-Assignment4\\Assets\\Scripts\\EnemyController.cs",
               "RelativeDocumentMoniker": "Assets\\Scripts\\EnemyController.cs",
               "ToolTip": "C:\\Users\\boomy\\Desktop\\projects\\sheridan\\PROG50102-Assignment4\\Assets\\Scripts\\EnemyController.cs",
               "RelativeToolTip": "Assets\\Scripts\\EnemyController.cs",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAAAA0AAAAJAAAAAAAAAA==",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAgAAAAsAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
               "WhenOpened": "2025-11-22T19:34:22.311Z",
               "EditorCaption": ""
             },
             {
               "$type": "Document",
-              "DocumentIndex": 1,
+              "DocumentIndex": 0,
               "Title": "BotControllerV4.cs",
               "DocumentMoniker": "C:\\Users\\boomy\\Desktop\\projects\\sheridan\\PROG50102-Assignment4\\Assets\\Scripts\\BotControllerV4.cs",
               "RelativeDocumentMoniker": "Assets\\Scripts\\BotControllerV4.cs",
               "ToolTip": "C:\\Users\\boomy\\Desktop\\projects\\sheridan\\PROG50102-Assignment4\\Assets\\Scripts\\BotControllerV4.cs",
               "RelativeToolTip": "Assets\\Scripts\\BotControllerV4.cs",
-              "ViewState": "AgIAAAgAAAAAAAAAAAAQwBQAAAAIAAAAAAAAAA==",
+              "ViewState": "AgIAAEgAAAAAAAAAAAAmwBEAAAAAAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-11-21T20:06:22.378Z"
+              "WhenOpened": "2025-11-21T20:06:22.378Z",
+              "EditorCaption": ""
             },
             {
               "$type": "Document",
-              "DocumentIndex": 3,
+              "DocumentIndex": 5,
               "Title": "Destroyable.cs",
               "DocumentMoniker": "C:\\Users\\boomy\\Desktop\\projects\\sheridan\\PROG50102-Assignment4\\Assets\\Scripts\\Destroyable.cs",
               "RelativeDocumentMoniker": "Assets\\Scripts\\Destroyable.cs",
@@ -67,7 +101,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 2,
+              "DocumentIndex": 4,
               "Title": "CastleController.cs",
               "DocumentMoniker": "C:\\Users\\boomy\\Desktop\\projects\\sheridan\\PROG50102-Assignment4\\Assets\\Scripts\\CastleController.cs",
               "RelativeDocumentMoniker": "Assets\\Scripts\\CastleController.cs",

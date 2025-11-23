@@ -66,12 +66,12 @@
     <Compile Include="Assets\BotInputAction.cs" />
     <Compile Include="Assets\Scripts\DynamicWall.cs" />
     <Compile Include="Assets\Scripts\CameraMove.cs" />
+    <Compile Include="Assets\Scripts\PlayerController.cs" />
     <Compile Include="Assets\Scripts\Officers.cs" />
     <Compile Include="Assets\Scripts\HealthySystem.cs" />
     <Compile Include="Assets\Scripts\BotController.cs" />
     <Compile Include="Assets\Scripts\CapsuleController.cs" />
     <Compile Include="Assets\Scripts\IDoDamage.cs" />
-    <Compile Include="Assets\Scripts\BotControllerV4.cs" />
     <Compile Include="Assets\Scripts\EnemyController.cs" />
     <Compile Include="Assets\Scripts\Bullet.cs" />
     <Compile Include="Assets\Scripts\EnemyGenerator.cs" />
