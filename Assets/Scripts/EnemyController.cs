@@ -6,11 +6,17 @@ public class EnemyController : MonoBehaviour
     [SerializeField] Animator animator;
     [SerializeField] float moveSpeed = 0.5f;
     [SerializeField] float turnSpeed = 5f;
-    public GameObject player;
-    bool isWalking = false;
-    bool isIdle = true;
+    private GameObject player;
+    private float spawnTime = 0;
+    private bool isWalking = false;
+    private bool isIdle = true;
     private int IsWalking = Animator.StringToHash("isWalking");
     private int IsIdle = Animator.StringToHash("isIdle");
+
+    public void SetPlayer(ref GameObject _player)
+    {
+        player = _player;
+    }
 
     private void Awake()
     {
@@ -21,7 +27,9 @@ public class EnemyController : MonoBehaviour
     }
 
     private void Start()
-    { 
+    {
+        spawnTime = Random.Range(1.0f, 5.0f);
+        Animate();
     }
 
     IEnumerator WaitAndDoSomething()
@@ -35,22 +43,33 @@ public class EnemyController : MonoBehaviour
         animator.SetBool(IsIdle, isIdle);
     }
 
-    public void Move()
+    private void Move()
     {
-        Vector3 direction = player.transform.position - transform.position;
+        Vector3 direction = Vector3.zero;
+        if (player != null) direction = player.transform.position - transform.position;
         if (direction.magnitude > 0.1f)
         {
             isWalking = true;
-            isIdle = !isWalking;
             transform.position += direction.normalized * moveSpeed * Time.deltaTime;
             transform.forward = Vector3.Slerp(transform.forward, direction, turnSpeed * Time.deltaTime);
         }
+        else
+        {
+            isWalking = false;
+        }
+        isIdle = !isWalking;
     }
 
     private void Update()
     {
-        StartCoroutine(WaitAndDoSomething());
-        Move();
-        Animate();
+        if (spawnTime > 0)
+        {
+            spawnTime -= Time.deltaTime;
+        }
+        else
+        {
+            Move();
+            Animate();
+        }
     }
 }

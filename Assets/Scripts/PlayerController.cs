@@ -12,9 +12,15 @@ public class PlayerController : MonoBehaviour
     private int IsWalking = Animator.StringToHash("isWalking");
     private int IsIdle = Animator.StringToHash("isIdle");
     private int ShootBullet = Animator.StringToHash("shootBullet");
+    private int VictoryPose = Animator.StringToHash("victory");
     [SerializeField] float moveSpeed = 2.5f;
     [SerializeField] float turnSpeed = 100f;
     private BotInputAction inputActions;
+
+    public void Victory()
+    {
+        animator.SetTrigger(VictoryPose);
+    }
 
     private void Awake()
     {
@@ -68,7 +74,7 @@ public class PlayerController : MonoBehaviour
         return isWalking;
     }
 
-    public void Move()
+    private void Move()
     {
         Vector2 input = GetInputNormalized();
         Vector3 direction = Vector3.zero;
@@ -88,7 +94,7 @@ public class PlayerController : MonoBehaviour
         }
     }
 
-    public void Update()
+    private void Update()
     {
         Move();
         Animate();

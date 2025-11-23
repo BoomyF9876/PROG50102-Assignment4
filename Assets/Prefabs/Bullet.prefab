@@ -268,5 +268,5 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   lifeSpan: 2.5
   speed: 50
-  damage: 25
+  damage: 100
   decal: {fileID: 5942662705827001953, guid: 7e81db40c7c717147a46db88e0e5a702, type: 3}

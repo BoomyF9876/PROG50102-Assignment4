@@ -6,7 +6,7 @@ public class Bullet : MonoBehaviour, IDoDamage
     [SerializeField] float speed = 50f;
     Rigidbody rb;
 
-    [SerializeField] int damage = 25;
+    [SerializeField] int damage = 100;
     [SerializeField] GameObject decal;
 
     public GameObject Decal { get { return decal; } }

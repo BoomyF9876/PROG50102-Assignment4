@@ -9,7 +9,7 @@ public class Destroyable : MonoBehaviour, ITakeDamage
 
     public float NormalizedHealth { get { return (float)health/maxHealth; } }
 
-    [SerializeField] HealthySystem healthySystem;
+    [SerializeField] public HealthySystem healthySystem;
 
     void Start()
     {
