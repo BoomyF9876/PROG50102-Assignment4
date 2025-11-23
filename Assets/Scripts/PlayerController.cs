@@ -8,12 +8,15 @@ public class PlayerController : MonoBehaviour
     [SerializeField] Transform weapon;
     [SerializeField] Rigidbody bullet;
     private bool isWalking = false;
+    private bool isRunning = false;
     private bool isIdle = true;
+    private float speed = 0;
     private int IsWalking = Animator.StringToHash("isWalking");
     private int IsIdle = Animator.StringToHash("isIdle");
+    private int IsRunning = Animator.StringToHash("isRunning");
     private int ShootBullet = Animator.StringToHash("shootBullet");
     private int VictoryPose = Animator.StringToHash("victory");
-    [SerializeField] float moveSpeed = 2.5f;
+    [SerializeField] float startSpeed = 2.5f;
     [SerializeField] float turnSpeed = 100f;
     private BotInputAction inputActions;
 
@@ -30,6 +33,7 @@ public class PlayerController : MonoBehaviour
         }
         inputActions = new BotInputAction();
         inputActions.Enable();
+        speed = startSpeed;
     }
 
     private Vector2 GetInput()
@@ -51,6 +55,7 @@ public class PlayerController : MonoBehaviour
     {
         animator.SetBool(IsWalking, isWalking);
         animator.SetBool(IsIdle, isIdle);
+        animator.SetBool(IsRunning, isRunning);
     }
 
     private bool CanMove(Vector2 input, Vector3 position, ref Vector3 direction)
@@ -70,8 +75,19 @@ public class PlayerController : MonoBehaviour
             isIdle = Physics.Raycast(position, direction, maxDistance) || direction.magnitude < 0.001f;
         }
 
-        isWalking = !isIdle;
-        return isWalking;
+        if (speed - startSpeed < 1.5f)
+        {
+            speed += Time.deltaTime;
+            isWalking = !isIdle;
+            isRunning = false;
+        }
+        else
+        {
+            isRunning = !isIdle;
+            isWalking = false;
+        }
+
+        return !isIdle;
     }
 
     private void Move()
@@ -80,8 +96,12 @@ public class PlayerController : MonoBehaviour
         Vector3 direction = Vector3.zero;
         if (CanMove(input, transform.position, ref direction))
         {
-            transform.position += direction * moveSpeed * Time.deltaTime;
+            transform.position += direction * speed * Time.deltaTime;
             transform.forward = Vector3.Slerp(transform.forward, direction, turnSpeed * Time.deltaTime);
+        }
+        else
+        {
+            speed = startSpeed;
         }
     }
 
