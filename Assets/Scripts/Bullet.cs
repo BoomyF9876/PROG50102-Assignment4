@@ -27,6 +27,7 @@ public class Bullet : MonoBehaviour, IDoDamage
 
     private void Init()
     {
+        GetComponent<AudioSource>().Play();
         rb.linearVelocity = transform.forward * speed;
     }
 
