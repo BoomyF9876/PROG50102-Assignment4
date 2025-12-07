@@ -1,3 +1,4 @@
+using System.Collections.Generic;
 using UnityEngine;
 
 [CreateAssetMenu(fileName = "EnemyData", menuName = "SOData/Enemy", order = 1)]
@@ -10,8 +11,13 @@ public class EnemyDataSO : ScriptableObject
     public int attack = 25;
     public int maxHealth = 100;
 
-    public void Attack(string target)
+    [SerializeReference] public List<AttackDataSO> attacks = new();
+
+    public void Attack(Transform attacker, Transform target)
     {
-        Debug.Log($"{enemyName} attacks {target} for {attack} damage");
+        foreach (IAttack attack in attacks)
+        {
+            attack.Execute(attacker, target);
+        }
     }
 }

@@ -11,8 +11,8 @@ public class EnemyTypeV2 : MonoBehaviour
         currentHealth = enemyData.maxHealth;
     }
 
-    public void Attack(string target)
+    public void Attack(Transform attacker, Transform target)
     {
-        enemyData.Attack(target);
+        enemyData.Attack(attacker, target);
     }
 }

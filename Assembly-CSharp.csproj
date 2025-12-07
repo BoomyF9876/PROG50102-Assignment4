@@ -61,34 +61,37 @@
     <Analyzer Include="C:\Program Files\Unity\Hub\Editor\6000.0.59f2\Editor\Data\Tools\Unity.SourceGenerators\Unity.UIToolkit.SourceGenerator.dll" />
   </ItemGroup>
   <ItemGroup>
-    <Compile Include="Assets\Scripts\Spaceships.cs" />
+    <Compile Include="Assets\ScriptableObjects\RangedAttackDataSO1.cs" />
     <Compile Include="Assets\Scripts\MyBox.cs" />
+    <Compile Include="Assets\Scripts\ConsoleApp.cs" />
     <Compile Include="Assets\BotInputAction.cs" />
     <Compile Include="Assets\Scripts\DynamicWall.cs" />
     <Compile Include="Assets\Scripts\CameraMove.cs" />
+    <Compile Include="Assets\ScriptableObjects\WeaponSO.cs" />
     <Compile Include="Assets\Scripts\PlayerController.cs" />
-    <Compile Include="Assets\Scripts\Officers.cs" />
     <Compile Include="Assets\Scripts\BotCameraSwitcher.cs" />
     <Compile Include="Assets\Scripts\HealthySystem.cs" />
     <Compile Include="Assets\Scripts\BotController.cs" />
     <Compile Include="Assets\Scripts\CapsuleController.cs" />
+    <Compile Include="Assets\ScriptableObjects\MeleeAttackDataSO.cs" />
+    <Compile Include="Assets\ScriptableObjects\IAttack.cs" />
     <Compile Include="Assets\Scripts\BarProgress.cs" />
     <Compile Include="Assets\Scripts\IDoDamage.cs" />
+    <Compile Include="Assets\ScriptableObjects\AttackDataSO.cs" />
     <Compile Include="Assets\Scripts\UITestManager.cs" />
     <Compile Include="Assets\Scripts\EnemyController.cs" />
     <Compile Include="Assets\Scripts\Bullet.cs" />
     <Compile Include="Assets\Scripts\EnemyGenerator.cs" />
     <Compile Include="Assets\Scripts\CastleController.cs" />
     <Compile Include="Assets\Scripts\PlayerMove.cs" />
+    <Compile Include="Assets\ScriptableObjects\MagicAttackDataSO2.cs" />
     <Compile Include="Assets\Scripts\EnemyAttack.cs" />
     <Compile Include="Assets\Scripts\MouseUtil.cs" />
     <Compile Include="Assets\Scripts\BotControllerV3.cs" />
     <Compile Include="Assets\Scripts\Destroyable.cs" />
-    <Compile Include="Assets\Scripts\PlanetarySystem.cs" />
     <Compile Include="Assets\Scripts\ITakeDamage.cs" />
     <Compile Include="Assets\ScriptableObjects\EnemyDataSO.cs" />
     <Compile Include="Assets\Scripts\BotControllerV2.cs" />
-    <Compile Include="Assets\Scripts\Missions.cs" />
     <Compile Include="Assets\ScriptableObjects\EnemyTypeV2.cs" />
     <Compile Include="Assets\Scripts\CameraController.cs" />
   </ItemGroup>
