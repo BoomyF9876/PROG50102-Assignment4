@@ -357,7 +357,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   lifeSpan: 2.5
   speed: 50
-  damage: 100
+  damage: 40
   decal: {fileID: 5942662705827001953, guid: 7e81db40c7c717147a46db88e0e5a702, type: 3}
 --- !u!82 &4755653263707392842
 AudioSource:

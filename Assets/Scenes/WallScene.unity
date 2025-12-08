@@ -382,7 +382,7 @@ MonoBehaviour:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 365595775}
-  m_Enabled: 1
+  m_Enabled: 0
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: 46ec454142cd0ee44b956d5c0d3c41a1, type: 3}
   m_Name: 
@@ -1009,7 +1009,7 @@ MonoBehaviour:
   LayerIndex: 0
   Instructions:
   - FullHash: -178524345
-    Camera: {fileID: 1190654567}
+    Camera: {fileID: 792887607}
     ActivateAfter: 0
     MinDuration: 0
   - FullHash: 1201038995
@@ -1177,8 +1177,8 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 961739749}
   serializedVersion: 2
-  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 0, y: 1.2, z: -4}
+  m_LocalRotation: {x: 0.24879193, y: 0.0000000025089912, z: -6.4448125e-10, w: 0.968557}
+  m_LocalPosition: {x: -0.000000009079037, y: 4.9638767, z: -5.7524104}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []
@@ -1841,8 +1841,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   player: {fileID: 365595775}
   enemy: {fileID: 7360008927293982140, guid: f0dfb3cff182dd1428a8a0124ce0729b, type: 3}
-  healthySystem: {fileID: 1147997045171591838, guid: fd9b9460767790649a690bac5b854fcf, type: 3}
-  count: 10
+  count: 30
 --- !u!1 &2075847313
 GameObject:
   m_ObjectHideFlags: 0
@@ -1906,7 +1905,11 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 5835913439986782990, guid: b19c5d16a03ab2d4a815d6f2f4d4d49c, type: 3}
       propertyPath: m_Enabled
-      value: 0
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 5835913439986782990, guid: b19c5d16a03ab2d4a815d6f2f4d4d49c, type: 3}
+      propertyPath: turnSpeed
+      value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 6100181474185883813, guid: b19c5d16a03ab2d4a815d6f2f4d4d49c, type: 3}
       propertyPath: m_LocalPosition.y

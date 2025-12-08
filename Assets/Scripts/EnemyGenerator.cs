@@ -5,7 +5,6 @@ public class EnemyGenerator : MonoBehaviour
 {
     [SerializeField] private GameObject player;
     [SerializeField] private GameObject enemy;
-    [SerializeField] private HealthySystem healthySystem;
     [SerializeField] private int count = 10;
     private bool isVictory = false;
 
@@ -22,7 +21,7 @@ public class EnemyGenerator : MonoBehaviour
             enemyController.SetPlayer(ref player);
 
             Destroyable destroyable = b.AddComponent(typeof(Destroyable)) as Destroyable;
-            destroyable.healthySystem = healthySystem;
+            destroyable.healthySystem = b.GetComponentInChildren<HealthySystem>();
         }
     }
 
