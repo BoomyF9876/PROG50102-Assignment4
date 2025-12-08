@@ -5,14 +5,25 @@ public class BarProgress : MonoBehaviour
 {
     [SerializeField] Image progressBar;
     float progress = 0;
-    float progressSpeed = 25;
     float progressMax = 100;
 
-    // Update is called once per frame
+    float maxHealth = 0;
+    float health = 0;
+
+    public void TakeDamage(float _damage)
+    {
+        health -= _damage;
+    }
+
+    public void SetMaxHealth(float _health)
+    {
+        maxHealth = _health;
+        health = _health;
+    }
+
     private void Update()
     {
-        progress += progressSpeed * Time.deltaTime;
-        progressBar.fillAmount = progress / progressMax;
+        progressBar.fillAmount = health / maxHealth;
 
         if (progress > progressMax) progress = 0;
     }

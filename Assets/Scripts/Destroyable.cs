@@ -11,16 +11,27 @@ public class Destroyable : MonoBehaviour, ITakeDamage
 
     [SerializeField] public HealthySystem healthySystem;
 
+    [SerializeField] public UITestManager enemyCanvas;
+    [SerializeField] public BarProgress totalHealth;
+
     void Start()
     {
         health = maxHealth;
     }
+
+    public float GetMaxHealth() { return maxHealth; }
     public void TakeDamage(int damage)
     {
+        totalHealth.TakeDamage(damage > health ? health: damage);
+
         health -= damage;
         if (health < maxHealth) healthySystem.gameObject.SetActive(true);
         healthySystem.UpdateHealth(NormalizedHealth);
-        if (health <= 0) Destroy(gameObject);
+        if (health <= 0)
+        {
+            Destroy(gameObject);
+            enemyCanvas.DecrementEnemy();
+        }
     }
 
     void OnCollisionEnter(Collision collision)

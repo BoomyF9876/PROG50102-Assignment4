@@ -58,7 +58,7 @@ public class PlayerController : MonoBehaviour
         animator.SetBool(IsRunning, isRunning);
     }
 
-    private bool CanMove(Vector2 input, Vector3 position, ref Vector3 direction)
+    private bool CanMove(Vector2 input, Vector3 position, Vector3 forward, ref Vector3 direction)
     {
         float maxDistance = 0.5f;
         direction = new Vector3(input.x, 0, input.y);
@@ -74,6 +74,22 @@ public class PlayerController : MonoBehaviour
             direction = new Vector3(0, 0, input.y);
             isIdle = Physics.Raycast(position, direction, maxDistance) || direction.magnitude < 0.001f;
         }
+
+        float angle;
+        if (forward.magnitude == 0)
+        {
+            angle = 1.0f;
+        }
+        else
+        {
+            angle = Vector3.Dot(new Vector3(0, 0, 1), forward) / forward.magnitude;
+        }
+
+        direction = new Vector3(
+            direction.x * angle - direction.z * Mathf.Sin(Mathf.Acos(angle)),
+            0,
+            direction.x * Mathf.Sin(Mathf.Acos(angle)) + direction.z * angle
+        );
 
         if (speed - startSpeed < 1.5f)
         {
@@ -94,7 +110,7 @@ public class PlayerController : MonoBehaviour
     {
         Vector2 input = GetInputNormalized();
         Vector3 direction = Vector3.zero;
-        if (CanMove(input, transform.position, ref direction))
+        if (CanMove(input, transform.position, transform.forward, ref direction))
         {
             transform.position += direction * speed * Time.deltaTime;
             transform.forward = Vector3.Slerp(transform.forward, direction, turnSpeed * Time.deltaTime);
