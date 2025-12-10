@@ -2,7 +2,7 @@ using UnityEngine;
 
 public class Destroyable : MonoBehaviour, ITakeDamage
 {
-    private int maxHealth = 100;
+    [SerializeField] private int maxHealth = 100;
     private int health = 0;
 
     public int Health { get { return health; } }
@@ -22,6 +22,7 @@ public class Destroyable : MonoBehaviour, ITakeDamage
     public float GetMaxHealth() { return maxHealth; }
     public void TakeDamage(int damage)
     {
+        GetComponent<AudioSource>().Play();
         totalHealth.TakeDamage(damage > health ? health: damage);
 
         health -= damage;

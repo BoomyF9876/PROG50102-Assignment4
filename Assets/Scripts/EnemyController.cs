@@ -1,5 +1,6 @@
-using UnityEngine;
 using System.Collections;
+using UnityEngine;
+using UnityEngine.UIElements;
 
 public class EnemyController : MonoBehaviour
 {
@@ -32,11 +33,6 @@ public class EnemyController : MonoBehaviour
         Animate();
     }
 
-    IEnumerator WaitAndDoSomething()
-    {
-        yield return new WaitForSeconds(2.0f);
-    }
-
     private void Animate()
     {
         animator.SetBool(IsWalking, isWalking);
@@ -45,13 +41,19 @@ public class EnemyController : MonoBehaviour
 
     private void Move()
     {
-        Vector3 direction = Vector3.zero;
-        if (player != null) direction = player.transform.position - transform.position;
-        if (direction.magnitude > 0.1f)
+        Vector3 direction = player.transform.position - transform.position;
+        Vector3 displacement = direction.normalized * moveSpeed * Time.deltaTime;
+        
+        RayCastCollision collision = GetComponent<RayCastCollision>();
+
+        if (
+            direction.magnitude > 0.01f &&
+            collision.CanMove(transform.position, ref displacement)
+        )
         {
             isWalking = true;
-            transform.position += direction.normalized * moveSpeed * Time.deltaTime;
-            transform.forward = Vector3.Slerp(transform.forward, direction, turnSpeed * Time.deltaTime);
+            transform.forward = Vector3.Slerp(transform.forward, direction.normalized, turnSpeed * Time.deltaTime);
+            transform.position += displacement;
         }
         else
         {

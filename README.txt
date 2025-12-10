@@ -4,7 +4,11 @@ URP note: None
 
 Controls: WASD to move character, Left mouse click to shoot
 
-Controllers: PlayerController.cs to control the player, EnemyGenerator.cs to generate enemies, and EnemyController.cs to move the enemy
+Architecture:
+BotController: PlayerController.cs, EnemyController.cs
+Refactor: Added ShootingController.cs, CapsuleCastCollision.cs, RayCastCollision.cs
+Line-of-sight: The Gizmo method for player, Raycast for enemies
+State-Driven Camera: idle camera, walking camera, victory camera
 
 Asset credits:
 -- Castle Guard 01 https://www.mixamo.com/#/?page=1&query=castle+guard+01&type=Character
@@ -16,5 +20,9 @@ Asset credits:
 -- Crypto https://www.mixamo.com/#/?page=1&query=crypto&type=Character
 -- Old Man Idle https://www.mixamo.com/#/?page=1&query=old+man+idle&type=Motion%2CMotionPack
 -- Walking https://www.mixamo.com/#/?page=2&query=walking&type=Motion%2CMotionPack
+-- SWAV_6.wav, SWAV_9.wav https://sounds.spriters-resource.com/ds_dsi/kerorpg/asset/394815/
 
-Known issues: None
+Known issues:
+-- Moving backwards sometimes will make the camera shake
+-- Camera angle for the victory camera is pointing to the ground
+-- Only one type of obstacle

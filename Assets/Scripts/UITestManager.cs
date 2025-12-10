@@ -9,7 +9,9 @@ public class UITestManager : MonoBehaviour
     [SerializeField] TextMeshProUGUI textCounter;
     private float counter = 0;
     private int enemyCount = 0;
+    private bool timer = true;
     private string countTxt = "Enemy Count: ";
+    private string timeTxt = "Time: ";
 
     private void Start()
     {
@@ -31,10 +33,16 @@ public class UITestManager : MonoBehaviour
         enemyCount--;
     }
 
+    public void StopTimer()
+    {
+        timeTxt = "Clear Time: ";
+        timer = false;
+    }
+
     private void Update()
     {
-        counter += Time.deltaTime;
+        if (timer) counter += Time.deltaTime;
         enemyCounter.text = countTxt + enemyCount.ToString();
-        textCounter.text = counter.ToString("F2") + "s";
+        textCounter.text = timeTxt + counter.ToString("F2") + "s";
     }
 }

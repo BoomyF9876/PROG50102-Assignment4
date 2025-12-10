@@ -8,13 +8,14 @@ public class EnemyGenerator : MonoBehaviour
     [SerializeField] private GameObject canvas;
     [SerializeField] private int count = 10;
     private bool isVictory = false;
+    private UITestManager uiManager;
 
     private void Start()
     {
         float totalMaxHealth = 0;
         GameObject a = Instantiate(canvas, transform.position, Quaternion.identity);
         a.name = $"EnemyCanvas";
-        UITestManager uiManager = a.GetComponent<UITestManager>();
+        uiManager = a.GetComponent<UITestManager>();
         uiManager.SetEnemyCounter(count);
 
         BarProgress bar = a.GetComponentInChildren<BarProgress>();
@@ -46,6 +47,7 @@ public class EnemyGenerator : MonoBehaviour
             PlayerController playerController = player.GetComponent<PlayerController>();
             playerController.Victory();
             isVictory = true;
+            uiManager.StopTimer();
         }
     }
 }
