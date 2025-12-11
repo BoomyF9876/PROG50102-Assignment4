@@ -267,7 +267,7 @@ Transform:
   m_GameObject: {fileID: 326355847}
   serializedVersion: 2
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 0.68466485, y: -1.7906642, z: 3.839563}
+  m_LocalPosition: {x: 0.18466486, y: 1.9093359, z: -0.1604371}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []
@@ -329,10 +329,10 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   Damping: {x: 0.1, y: 0.5, z: 0.3}
-  ShoulderOffset: {x: 0.5, y: -0.4, z: 0}
-  VerticalArmLength: 0.4
+  ShoulderOffset: {x: 0, y: 4, z: -2}
+  VerticalArmLength: -0.3
   CameraSide: 1
-  CameraDistance: 2
+  CameraDistance: 4
   AvoidObstacles:
     Enabled: 0
     CollisionFilter:
@@ -510,9 +510,9 @@ MonoBehaviour:
   m_StreamingVersion: 20241001
   m_LegacyPriority: 0
   DefaultTarget:
-    Enabled: 0
+    Enabled: 1
     Target:
-      TrackingTarget: {fileID: 0}
+      TrackingTarget: {fileID: 365595777}
       LookAtTarget: {fileID: 0}
       CustomLookAtTarget: 0
   DefaultBlend:
@@ -571,8 +571,8 @@ Transform:
   m_ConstrainProportionsScale: 0
   m_Children:
   - {fileID: 1190654566}
-  - {fileID: 792887606}
   - {fileID: 326355848}
+  - {fileID: 792887606}
   m_Father: {fileID: 0}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &961739749
@@ -1200,7 +1200,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 5835913439986782990, guid: b19c5d16a03ab2d4a815d6f2f4d4d49c, type: 3}
       propertyPath: turnSpeed
-      value: 2
+      value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 7317399222531437015, guid: b19c5d16a03ab2d4a815d6f2f4d4d49c, type: 3}
       propertyPath: m_LocalScale.x

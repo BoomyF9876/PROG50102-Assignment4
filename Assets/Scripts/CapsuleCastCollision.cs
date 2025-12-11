@@ -22,21 +22,6 @@ public class CapsuleCastCollision : MonoBehaviour
             canMove = !Physics.CapsuleCast(position, position + Vector3.up * height, maxDistance / 2, direction, maxDistance);
         }
 
-        float angle;
-        if (forward.magnitude == 0)
-        {
-            angle = 1.0f;
-        }
-        else
-        {
-            angle = Vector3.Dot(new Vector3(0, 0, 1), forward) / forward.magnitude;
-        }
-
-        direction = new Vector3(
-            direction.x * angle - direction.z * Mathf.Sin(Mathf.Acos(angle)),
-            0,
-            direction.x * Mathf.Sin(Mathf.Acos(angle)) + direction.z * angle
-        );
 
         return canMove && direction.magnitude > 0.001f;
     }

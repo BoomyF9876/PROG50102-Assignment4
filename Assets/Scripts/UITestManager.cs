@@ -13,16 +13,6 @@ public class UITestManager : MonoBehaviour
     private string countTxt = "Enemy Count: ";
     private string timeTxt = "Time: ";
 
-    private void Start()
-    {
-        resetButton.onClick.AddListener(ResetCounter);
-    }
-
-    public void ResetCounter()
-    {
-        counter = 0;
-    }
-
     public void SetEnemyCounter(int _count)
     {
         enemyCount = _count;

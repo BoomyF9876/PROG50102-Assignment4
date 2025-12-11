@@ -23,6 +23,5 @@ Asset credits:
 -- SWAV_6.wav, SWAV_9.wav https://sounds.spriters-resource.com/ds_dsi/kerorpg/asset/394815/
 
 Known issues:
--- Moving backwards sometimes will make the camera shake
--- Camera angle for the victory camera is pointing to the ground
+-- Moving controller logic is not intuitive. WASD is mapped to relative direction not absolute direction.
 -- Only one type of obstacle
